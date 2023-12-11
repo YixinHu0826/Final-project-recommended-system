@@ -42,3 +42,13 @@ Base on the data catch from movielens below
 2. Feedback: base on the movies people select likes, the system recommend similar one to them based on direct name, type, film length, country, release time, movielens rating, film length, director, actors
 3. Types: which types has most movies, which would be more possible to be recommended
 4. Lengths: which types has most popular length, which would be more possible to be recommended
+
+# Training
+Provide users with feedback options, including "like", "dislike", "refresh", etc., and adjust the recommendation results according to user feedback; Incremental learning of the algorithm or real-time updating of the user interest model can improve the recommendation effect.
+
+# Group information
+YIXIN HU
+yhu134@jh.edu
+
+YUANKUN LI
+yli604@jh.edu
