@@ -56,7 +56,7 @@ def evaluate_collaborative_filtering(train_data_matrix, test_data_matrix, simila
     user_based_rmse = rmse(user_prediction, test_data_matrix)
     item_based_rmse = rmse(item_prediction, test_data_matrix)
 
-    # 基于模型的协同过滤
+    # Model-based collaborative filtering
     u, s, vt = svds(train_data_matrix, k=model_k)
     s_diag_matrix = np.diag(s)
     model_based_prediction = np.dot(np.dot(u, s_diag_matrix), vt)
@@ -136,8 +136,8 @@ data['rating'] = np.clip(data['rating'], 1, 5)
 unique_users = data['userId'].nunique()
 unique_movies = data['movieId'].nunique()
 
-print("\n唯一用户数量:", unique_users)
-print("唯一电影数量:", unique_movies)
+print("\nNumber of unique users:", unique_users)
+print("Number of unique films:", unique_movies)
 
 # Split the data set into a training set and a test set
 train_data, test_data = train_test_split(data, test_size=0.25, random_state=42)
